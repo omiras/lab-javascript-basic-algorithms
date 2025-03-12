@@ -46,19 +46,29 @@ if (driver < navigator) {
 
 // BONUS 1
 
-let longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+let longText = "Praesent et pharetra in nibh ut feugiat. Nulla sit amet malesuada urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas quis magna non nisl malesuada semper id sit amet lorem. Mauris blandit enim ut posuere placerat. Donec id massa erat. Nam arcu mi, euismod vel mattis in, convallis eget odio. Nullam sem nisi, sollicitudin et neque eget, porttitor tempor leo. Nam ut mi nec lacus euismod laoreet non vitae magna. Curabitur in condimentum neque. Aliquam non dui faucibus arcu vulputate venenatis vitae vel quam. Integer placerat dapibus odio, id consequat est interdum nec.";
 
 // Necesitamos guardar en algún sitio el número de palabras. Inicialmente es 0
 let numWords = 0;
+
+// Guardamos las veces que aparece la palabra et
+let numEt = 0;
 
 // Recorremos el string. Cada vez que encontramos un espacio en blanco podemos considerar que hay una palabra nueva
 for (let i=0; i<longText.length; i++) {
     if (longText[i]==" "){
         numWords++;
+        // Esto tiene su cosa. Con el método slice "cortamos" la el string longText tres posiciones por detras del espacio encontrado hasta la siguiente posición de espacio en blanco. Si el substring resultante es " et " entonces hemos encontrado la palabra "et" e incrementamos la variable numEt 
+        // https://oscarm.tinytake.com/media/173b71b?filename=1741810648874_TinyTake12-03-2025-09-15-51_638774074476298658.png&sub_type=thumbnail_preview&type=attachment&width=1196&height=216
+        if (longText.slice(i - 3, i + 1) == " et ") {
+            numEt++;
+        }
     }
 }
 
 console.log("[BONUS 1]: Número total de palabras: ", numWords);
+console.log("[BONUS 1]: Número total de palabras 'et' : ", numEt);
+
 
 // BONUS 2
 
