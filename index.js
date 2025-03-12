@@ -7,26 +7,26 @@ console.log(`[Iteration 1]: The driver's name is ${driver}`);
 console.log(`[Iteration 1]: The navigators's name is ${navigator}`);
 
 // Iteration 2
-if (driver.length>navigator.length) {
+if (driver.length > navigator.length) {
     console.log(`[Iteration 2]: The driver has the longest name, it has ${driver.length} characters.`);
 
-} else if (driver.length<navigator.length) {
+} else if (driver.length < navigator.length) {
     console.log(`[Iteration 2]: The navigator has the longest name, it has ${navigator.length} characters.`);
 } else {
-    console.log(`[Iteration 2]: Wow, you both have equally long names, ${driver.length} characters!`);   
+    console.log(`[Iteration 2]: Wow, you both have equally long names, ${driver.length} characters!`);
 }
 
 // Iteration 3
 let driverUppercase = "";
 
-for (let i=0; i<driver.length; i++) {
+for (let i = 0; i < driver.length; i++) {
     driverUppercase = driverUppercase + driver[i].toUpperCase() + " ";
 }
 
 console.log(`[Iteration 3.1]: ${driverUppercase}`);
 
-let reversedNavigator = ""; 
-for (let i=navigator.length-1; i>=0; i--) {
+let reversedNavigator = "";
+for (let i = navigator.length - 1; i >= 0; i--) {
     reversedNavigator += navigator[i];
 }
 
@@ -55,9 +55,9 @@ let numWords = 0;
 let numEt = 0;
 
 // Recorremos el string. 
-for (let i=0; i<longText.length; i++) {
+for (let i = 0; i < longText.length; i++) {
     // Cada vez que encontramos un espacio en blanco podemos considerar que hay una palabra nueva
-    if (longText[i]==" "){
+    if (longText[i] == " ") {
         numWords++;
         // Esto tiene su cosa. Con el método slice "cortamos" la el string longText tres posiciones por detras del espacio encontrado hasta la siguiente posición de espacio en blanco. Si el substring resultante es " et " entonces hemos encontrado la palabra "et" e incrementamos la variable numEt 
         // https://oscarm.tinytake.com/media/173b71b?filename=1741810648874_TinyTake12-03-2025-09-15-51_638774074476298658.png&sub_type=thumbnail_preview&type=attachment&width=1196&height=216
@@ -76,19 +76,19 @@ console.log("[BONUS 1]: Número total de palabras 'et' : ", numEt);
 /**
  * Un palindromo se lee igual de principio al fin que de fin al principio de la palabra 
  */
-let phraseToCheck ="salas";
+let phraseToCheck = "salas";
 let palabraAlReves = "";
 
 /** Creamos la misma palabra pero escrita al revés y la guardamos en palabraAlReves. Para ello recorremos el string empezando por el último índice  */
-for (let i=phraseToCheck.length-1;i>=0;i--) {
+for (let i = phraseToCheck.length - 1; i >= 0; i--) {
     palabraAlReves = palabraAlReves + phraseToCheck[i];
 }
 
 /** Para saber si la palabra candidata es un palíndromo, tan solo tenemos que ver si los dos strings son iguales */
 if (palabraAlReves == phraseToCheck) {
-    console.log("[Iteration Bonus 2]: ", `${phraseToCheck} es un palíndromo.` );
+    console.log("[Iteration Bonus 2]: ", `${phraseToCheck} es un palíndromo.`);
 } else {
-    console.log("[Iteration Bonus 2]: ", `${phraseToCheck} NO es un palíndromo.` );
+    console.log("[Iteration Bonus 2]: ", `${phraseToCheck} NO es un palíndromo.`);
 
 }
 
