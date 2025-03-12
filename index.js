@@ -46,14 +46,14 @@ if (driver < navigator) {
 
 // BONUS 1
 
-let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+let longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 // Necesitamos guardar en algún sitio el número de palabras. Inicialmente es 0
 let numWords = 0;
 
 // Recorremos el string. Cada vez que encontramos un espacio en blanco podemos considerar que hay una palabra nueva
-for (let i=0; i<lorem.length; i++) {
-    if (lorem[i]==" "){
+for (let i=0; i<longText.length; i++) {
+    if (longText[i]==" "){
         numWords++;
     }
 }
@@ -65,19 +65,19 @@ console.log("[BONUS 1]: Número total de palabras: ", numWords);
 /**
  * Un palindromo se lee igual de principio al fin que de fin al principio de la palabra 
  */
-let palabraCandidata ="salas";
+let phraseToCheck ="salas";
 let palabraAlReves = "";
 
 /** Creamos la misma palabra pero escrita al revés y la guardamos en palabraAlReves. Para ello recorremos el string empezando por el último índice  */
-for (let i=palabraCandidata.length-1;i>=0;i--) {
-    palabraAlReves = palabraAlReves + palabraCandidata[i];
+for (let i=phraseToCheck.length-1;i>=0;i--) {
+    palabraAlReves = palabraAlReves + phraseToCheck[i];
 }
 
 /** Para saber si la palabra candidata es un palíndromo, tan solo tenemos que ver si los dos strings son iguales */
-if (palabraAlReves == palabraCandidata) {
-    console.log("[Iteration Bonus 2]: ", `${palabraCandidata} es un palíndromo.` );
+if (palabraAlReves == phraseToCheck) {
+    console.log("[Iteration Bonus 2]: ", `${phraseToCheck} es un palíndromo.` );
 } else {
-    console.log("[Iteration Bonus 2]: ", `${palabraCandidata} NO es un palíndromo.` );
+    console.log("[Iteration Bonus 2]: ", `${phraseToCheck} NO es un palíndromo.` );
 
 }
 
