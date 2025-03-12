@@ -54,8 +54,9 @@ let numWords = 0;
 // Guardamos las veces que aparece la palabra et
 let numEt = 0;
 
-// Recorremos el string. Cada vez que encontramos un espacio en blanco podemos considerar que hay una palabra nueva
+// Recorremos el string. 
 for (let i=0; i<longText.length; i++) {
+    // Cada vez que encontramos un espacio en blanco podemos considerar que hay una palabra nueva
     if (longText[i]==" "){
         numWords++;
         // Esto tiene su cosa. Con el método slice "cortamos" la el string longText tres posiciones por detras del espacio encontrado hasta la siguiente posición de espacio en blanco. Si el substring resultante es " et " entonces hemos encontrado la palabra "et" e incrementamos la variable numEt 
