@@ -16,7 +16,7 @@ if (driver.length > navigator.length) {
     console.log(`[Iteration 2]: Wow, you both have equally long names, ${driver.length} characters!`);
 }
 
-// Iteration 3
+// Iteration 3.1
 let driverUppercase = "";
 
 for (let i = 0; i < driver.length; i++) {
@@ -25,6 +25,7 @@ for (let i = 0; i < driver.length; i++) {
 
 console.log(`[Iteration 3.1]: ${driverUppercase}`);
 
+// Iteration 3.2
 let reversedNavigator = "";
 for (let i = navigator.length - 1; i >= 0; i--) {
     reversedNavigator += navigator[i];
